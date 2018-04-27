@@ -1,13 +1,19 @@
 d3.csv("data/school-data.csv", drawChart)
 
-// svg vars
-var svg_height = 800;
-var svg_width = window.innerWidth; //Width of the HTML
+
+//div var
+var rbardiv = document.getElementById('rbarchart');
+
+//get div style
+var divstyle = window.getComputedStyle(rbardiv);
+
+var svg_width = rbardiv.offsetWidth; //Width of the HTML
+var svg_height = rbardiv.offsetHeight;
 // chart height vars
 var reduce_chart_height = 40;
 var barHeight = svg_height / 2 - reduce_chart_height;
 // create svg
-var svg = d3.select('body')
+var svg = d3.select('#rbarchart')
 	.append("svg")
 	.attr("width", svg_width)
 	.attr("height", svg_height)
