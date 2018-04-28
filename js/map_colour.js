@@ -232,6 +232,8 @@ var schoolData = [{
 
 var map = L.map('map').setView([39.9611800, -82.9987900], 10.5);
 
+var drawChoice = 0;
+
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
 		id: 'mapbox.light'
@@ -254,6 +256,31 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	};
 
 	info.addTo(map);
+    
+    var customControl =  L.Control.extend({
+
+        options: {
+            position: 'topleft'
+        },
+
+        onAdd: function (map) {
+            var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+
+            container.style.backgroundColor = 'white';     
+            container.style.backgroundImage = "url(https://t1.gstatic.com/images?q=tbn:ANd9GcR6FCUMW5bPn8C4PbKak2BJQQsmC-K9-mbYBeFZm1ZM2w2GRy40Ew)";
+            container.style.backgroundSize = "30px 30px";
+            container.style.width = '30px';
+            container.style.height = '30px';
+
+            container.onclick = function(){
+                console.log('buttonClicked');
+            }
+
+            return container;
+        }
+    });
+    
+    
 
 
 	// get color depending on population density value
@@ -349,5 +376,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 		div.innerHTML = labels.join('<br>');
 		return div;
 	};
+    
+    map.addControl(new customControl());
 
 	legend.addTo(map);
