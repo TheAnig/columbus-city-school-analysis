@@ -57,12 +57,16 @@ var schoolData = [{
 		]]}	
 }, {
     "type": "Feature",
-    "properties": {"name": "Groveport-Madison"},
+    "properties": {"name": "Upper Arlington"},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
-
-		]]}];
+			[-83.103713, 40.063688],
+            [-83.103713, 39.989289],
+            [-83.042568, 39.989289],
+            [-83.042568, 40.063688]
+		]]}	
+}];
 
 
 
