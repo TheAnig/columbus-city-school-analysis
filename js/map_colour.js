@@ -66,6 +66,69 @@ var schoolData = [{
             [-83.042568, 39.989289],
             [-83.042568, 40.063688]
 		]]}	
+},
+{
+    "type": "Feature",
+    "properties": {"name": "Whitehall"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates":[[
+			[-82.912916, 39.986581],
+			[-82.851137, 39.986581],
+			[-82.851137, 39.951013],
+			[-82.912916, 39.951013]
+			
+		]]}	
+},
+{
+    "type": "Feature",
+    "properties": {"name": "Groveport Madison"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates":[[
+			[-83.121751, 39.907232],
+			[-83.008322, 39.907232],
+			[-83.008322, 39.821901],
+			[-83.121751, 39.821901]		
+		]]}	
+},
+{
+    "type": "Feature",
+    "properties": {"name": "Canal Winchester"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates":[[
+			[-82.848219, 39.869521],
+			[-82.752706, 39.869521],
+			[-82.752706, 39.817532],	
+			[-82.848219, 39.817532]
+			
+		]]}	
+},
+{
+    "type": "Feature",
+    "properties": {"name": "Reynoldsburg"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates":[[
+			[-82.836013, 39.988194],
+			[-82.742168, 39.988194],
+			[-82.742168, 39.931447],
+			[-82.836013, 39.931447]
+			
+		]]}	
+},
+{
+    "type": "Feature",
+    "properties": {"name": "Reynoldsburg"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates":[[
+			[-82.950013, 39.982204],
+			[-82.922772, 39.982204],
+			[-82.922772, 39.947409],
+			[-82.950013, 39.947409]			
+		]]}	
 }];
 
 
