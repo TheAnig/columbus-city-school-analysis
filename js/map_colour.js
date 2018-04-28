@@ -20,10 +20,10 @@ var schoolData = [{
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
-			[-82.34153272897099, 39.9078386874],
-			[-82.371962606971, 39.90975127531], 
-			[-82.371962606971, 39.92122680277],
-			[-82.35066169237099, 39.92505197859]
+			[-82.950013, 39.982204], 
+            [-82.950013, 39.947409],
+            [-82.922772, 39.947409],
+            [-82.922772, 39.982204]
 		]]}	
 }, 
 {
@@ -229,6 +229,8 @@ var map = L.map('map').setView([39.9611800, -82.9987900], 10.5);
 
 var drawChoice = 0;
 
+var drawArray = ["Graduation %","Success %", "ACT Remedial %", "Median Income %", "Diversity %", "Parent with College Degree", "Teacher Experience", "Teacher Salary", "Teacher Per 1000 student %", "Absent %"]
+
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
 		id: 'mapbox.light'
@@ -245,59 +247,313 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	};
 
 	info.update = function (props) {
-		this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-			'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+        
+        densityStr = drawArray[drawChoice];
+        
+		this._div.innerHTML = '<h4>Percentage Value</h4>' +  (props ?
+			'<b>' + props.name + '</b><br />' + densityStr + ' : ' + props[densityStr] + ' %'
 			: 'Hover over a state');
 	};
 
 	info.addTo(map);
     
-    var customControl =  L.Control.extend({
+    var customControl0 = L.Control.extend({
 
         options: {
             position: 'topleft'
         },
 
         onAdd: function (map) {
-            var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+            var container = L.DomUtil.create('div');
 
+            container.innerHTML = "<button>Graduation %</button>"
             container.style.backgroundColor = 'white';     
-            container.style.backgroundImage = "url(https://t1.gstatic.com/images?q=tbn:ANd9GcR6FCUMW5bPn8C4PbKak2BJQQsmC-K9-mbYBeFZm1ZM2w2GRy40Ew)";
             container.style.backgroundSize = "30px 30px";
             container.style.width = '30px';
             container.style.height = '30px';
 
             container.onclick = function(){
-                console.log('buttonClicked');
+                drawChoice = 0;
+                map.fire('viewreset');
+                console.log('drawChoice set to '+drawChoice);
             }
 
             return container;
         }
     });
     
-    
+    var customControl1 = L.Control.extend({
 
+        options: {
+            position: 'topleft'
+        },
+
+        onAdd: function (map) {
+            var container = L.DomUtil.create('div');
+
+            container.innerHTML = "<button>Success %</button>"
+            container.style.backgroundColor = 'white';     
+            container.style.backgroundSize = "30px 30px";
+            container.style.width = '30px';
+            container.style.height = '30px';
+
+            container.onclick = function(){
+                drawChoice = 1;
+                map.fire('viewreset');
+            }
+
+            return container;
+        }
+    });
+    
+    var customControl2 = L.Control.extend({
+
+        options: {
+            position: 'topleft'
+        },
+
+        onAdd: function (map) {
+            var container = L.DomUtil.create('div');
+
+            container.innerHTML = "<button>ACT Remedial %</button>"
+            container.style.backgroundColor = 'white';     
+            container.style.backgroundSize = "30px 30px";
+            container.style.width = '30px';
+            container.style.height = '30px';
+
+            container.onclick = function(){
+                drawChoice = 2;
+                map.fire('viewreset');
+            }
+
+            return container;
+        }
+    });
+    
+    var customControl3 = L.Control.extend({
+
+        options: {
+            position: 'topleft'
+        },
+
+        onAdd: function (map) {
+            var container = L.DomUtil.create('div');
+
+            container.innerHTML = "<button>Median Income %</button>"
+            container.style.backgroundColor = 'white';     
+            container.style.backgroundSize = "30px 30px";
+            container.style.width = '30px';
+            container.style.height = '30px';
+
+            container.onclick = function(){
+                drawChoice = 3;
+                map.fire('viewreset');
+            }
+
+            return container;
+        }
+    });
+    
+    var customControl4 = L.Control.extend({
+
+        options: {
+            position: 'topleft'
+        },
+
+        onAdd: function (map) {
+            var container = L.DomUtil.create('div');
+
+            container.innerHTML = "<button>Diversity %</button>"
+            container.style.backgroundColor = 'white';     
+            container.style.backgroundSize = "30px 30px";
+            container.style.width = '30px';
+            container.style.height = '30px';
+
+            container.onclick = function(){
+                drawChoice = 4;
+                map.fire('viewreset');
+            }
+
+            return container;
+        }
+    });
+    
+    var customControl5 = L.Control.extend({
+
+        options: {
+            position: 'topleft'
+        },
+
+        onAdd: function (map) {
+            var container = L.DomUtil.create('div');
+
+            container.innerHTML = "<button>Parent with College Degree</button>"
+            container.style.backgroundColor = 'white';     
+            container.style.backgroundSize = "30px 30px";
+            container.style.width = '30px';
+            container.style.height = '30px';
+
+            container.onclick = function(){
+                drawChoice = 5;
+                map.fire('viewreset');
+            }
+
+            return container;
+        }
+    });
+    
+    var customControl6 = L.Control.extend({
+
+        options: {
+            position: 'topleft'
+        },
+
+        onAdd: function (map) {
+            var container = L.DomUtil.create('div');
+
+            container.innerHTML = "<button>Teacher Experience</button>"
+            container.style.backgroundColor = 'white';     
+            container.style.backgroundSize = "30px 30px";
+            container.style.width = '30px';
+            container.style.height = '30px';
+
+            container.onclick = function(){
+                drawChoice = 6;
+                map.fire('viewreset');
+            }
+
+            return container;
+        }
+    });
+    
+    var customControl7 = L.Control.extend({
+
+        options: {
+            position: 'topleft'
+        },
+
+        onAdd: function (map) {
+            var container = L.DomUtil.create('div');
+
+            container.innerHTML = "<button>Teacher Salary</button>"
+            container.style.backgroundColor = 'white';     
+            container.style.backgroundSize = "30px 30px";
+            container.style.width = '30px';
+            container.style.height = '30px';
+
+            container.onclick = function(){
+                drawChoice = 7;
+                map.fire('viewreset');
+            }
+
+            return container;
+        }
+    });
+    
+    var customControl8 = L.Control.extend({
+
+        options: {
+            position: 'topleft'
+        },
+
+        onAdd: function (map) {
+            var container = L.DomUtil.create('div');
+
+            container.innerHTML = "<button>Teacher Density</button>"
+            container.style.backgroundColor = 'white';     
+            container.style.backgroundSize = "30px 30px";
+            container.style.width = '30px';
+            container.style.height = '30px';
+
+            container.onclick = function(){
+                drawChoice = 8;
+                map.fire('viewreset');
+            }
+
+            return container;
+        }
+    });
+    
+    var customControl9 = L.Control.extend({
+
+        options: {
+            position: 'topleft'
+        },
+
+        onAdd: function (map) {
+            var container = L.DomUtil.create('div');
+
+            container.innerHTML = "<button>Absent %</button>"
+            container.style.backgroundColor = 'white';     
+            container.style.backgroundSize = "30px 30px";
+            container.style.width = '30px';
+            container.style.height = '30px';
+
+            container.onclick = function(){
+                drawChoice = 9;
+                map.fire('viewreset');
+            }
+
+            return container;
+        }
+    });
+    
 
 	// get color depending on population density value
 	function getColor(d) {
-		return d > 1000 ? '#800026' :
-				d > 500  ? '#BD0026' :
-				d > 200  ? '#E31A1C' :
-				d > 100  ? '#FC4E2A' :
-				d > 50   ? '#FD8D3C' :
-				d > 20   ? '#FEB24C' :
-				d > 10   ? '#FED976' :
+		return d > 0.90 ? '#800026' :
+				d > 0.80  ? '#BD0026' :
+				d > 0.70  ? '#E31A1C' :
+				d > 0.60  ? '#FC4E2A' :
+				d > 0.40   ? '#FD8D3C' :
+				d > 0.20   ? '#FEB24C' :
+				d > 0.05   ? '#FED976' :
 							'#FFEDA0';
 	}
 
 	function style(feature) {
+        var color;
+        
+        switch(drawChoice){
+            case 1:
+                color = getColor(feature.properties["Success %"]);
+                break;
+            case 9:
+                color = getColor(feature.properties["Absent %"]);
+                break;
+            case 2:
+                color = getColor(feature.properties["ACT Remedial %"]);
+                break;
+            case 3:
+                color = getColor(feature.properties["Median Income %"]);
+                break;
+            case 4:
+                color = getColor(feature.properties["Diversity %"]);
+                break;
+            case 5:
+                color = getColor(feature.properties["Parents with College Degree"]);
+                break;
+            case 6:
+                color = getColor(feature.properties["Teacher Experience"]);
+                break;
+            case 7:
+                color = getColor(feature.properties["Teacher Salary"]);
+                break;
+            case 8:
+                color = getColor(feature.properties["Teacher Per 1000 student"]);
+                break;
+            
+            default:
+                color = getColor(feature.properties["Graduation %"]);
+        }
+        
 		return {
 			weight: 2,
 			opacity: 1,
 			color: 'Red',
 			dashArray: '3',
-			fillOpacity: 0.7,
-			fillColor: 'Red' //getColor(feature.properties.density)
+            fillOpacity: 0.7,
+			fillColor: color //getColor(feature.properties.density)
 		};
 	}
 
@@ -338,8 +594,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	}
 
 	geojson = L.geoJson(schoolData, { 
-		//style: style,
-		style: {color: "red", fillColor: "#f03"},
+		style: style,
+		//style: {color: "red", fillColor: "#f03"},
 		onEachFeature: onEachFeature
 	}).addTo(map);
 	
@@ -355,23 +611,32 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	legend.onAdd = function (map) {
 
 		var div = L.DomUtil.create('div', 'info legend'),
-			grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+			grades = [1, 2, 5, 10, 20, 50, 90, 100],
 			labels = [],
 			from, to;
 
-		for (var i = 0; i < grades.length; i++) {
+		for (var i = 0; i < grades.length-1; i++) {
 			from = grades[i];
 			to = grades[i + 1];
 
 			labels.push(
 				'<i style="background:' + getColor(from + 1) + '"></i> ' +
-				from + (to ? '&ndash;' + to : '+'));
+				from + (to ? '&ndash;' + to : ''));
 		}
 
 		div.innerHTML = labels.join('<br>');
 		return div;
 	};
     
-    map.addControl(new customControl());
+    map.addControl(new customControl0());
+    map.addControl(new customControl1());
+    map.addControl(new customControl2());
+    map.addControl(new customControl3());
+    map.addControl(new customControl4());
+    map.addControl(new customControl5());
+    map.addControl(new customControl6());
+    map.addControl(new customControl7());
+    map.addControl(new customControl8());
+    map.addControl(new customControl9());
 
 	legend.addTo(map);
