@@ -216,10 +216,10 @@ var schoolData = [{
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
-			[39.891353, -83.024819],
-            [39.891353, -82.931444],
-            [39.801007, -82.931444],
-            [39.801007, -83.024819]	
+			[-83.024819, 39.891353],
+            [-82.931444, 39.891353],
+            [-82.931444, 39.801007],
+            [-83.024819, 39.801007]	
 		]]}	
 }
 
@@ -234,9 +234,6 @@ var map = L.map('map').setView([39.9611800, -82.9987900], 10.5);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 		id: 'mapbox.light'
 	}).addTo(map);
 
@@ -329,8 +326,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 // 	var marker1 = L.marker([b1, b2]).addTo(map);
 // 	var marker1 = L.marker([c1, c2]).addTo(map);
 // 	var marker1 = L.marker([d1, d2]).addTo(map);
-
-	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
 
 	var legend = L.control({position: 'bottomright'});
