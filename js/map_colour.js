@@ -16,31 +16,6 @@ var d2 = -82.9987900
 
 var schoolData = [{
     "type": "Feature",
-    "properties": {"name": "Hamilton Local"},
-    "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-            [-82.9987900, 39.9111800],
-            [-82.9298900, 39.9111800],
-            [-82.9298900, 39.8611800],
-            [-82.9987900, 39.8611800],
-			[-82.9987900, 39.9111800]
-        ]]
-    }
-}, {
-    "type": "Feature",
-    "properties": {"name": "South-Western CSD"},
-    "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-            [-83.1637900, 39.9111800], 
-            [-82.9987900, 39.9111800],
-            [-82.9987900, 39.86699],  
-            [-83.1637900, 39.8611800],
-			  [-83.1637900, 39.9111800]
-	]]}	
-}, {
-    "type": "Feature",
     "properties": {"name": "Bexley"},
     "geometry": {
         "type": "Polygon",
@@ -55,18 +30,7 @@ var schoolData = [{
 			[-82.323274802171, 39.90975127531], 
 			[-82.34153272897099, 39.9078386874]
 		]]}	
-}, {
-    "type": "Feature",
-    "properties": {"name": "Upper Arlington"},
-    "geometry": {
-        "type": "Polygon",
-        "coordinates":[[
-			[-83.103713, 40.063688],
-            [-83.103713, 39.989289],
-            [-83.042568, 39.989289],
-            [-83.042568, 40.063688]
-		]]}	
-},
+}, 
 {
     "type": "Feature",
     "properties": {"name": "Whitehall"},
@@ -120,16 +84,148 @@ var schoolData = [{
 },
 {
     "type": "Feature",
-    "properties": {"name": "Reynoldsburg"},
+    "properties": {"name": "Dublin"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [-83.230086, 40.198078],
+            [-83.230086, 40.060755],
+            [-83.059657, 40.060755],
+            [-83.059657, 40.198078]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "Worthington"},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
-			[-82.950013, 39.982204],
-			[-82.922772, 39.982204],
-			[-82.922772, 39.947409],
-			[-82.950013, 39.947409]			
+            [-83.083629, 40.138881], 
+            [-83.083629, 40.074383],
+            [-82.971307, 40.074383],  
+            [-82.971307, 40.138881]
+        ]]}    
+}, {
+    "type": "Feature",
+    "properties": {"name": "Westerville"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [-82.980829, 40.179594],
+            [-82.980829, 40.055283],
+            [-82.851353, 40.055283],
+            [-82.851353, 40.179594]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "Plain Local"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [-82.873265, 40.129702],
+            [-82.873265, 40.051028],
+            [-82.761827, 40.051028],
+            [-82.761827, 40.129702]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "Gahanna"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [-82.916201, 40.058967],
+            [-82.916201, 39.978671],
+            [-82.767483, 39.978671],
+            [-82.767483, 40.058967]
+        ]]
+    }
+},
+
+{
+    "type": "Feature",
+    "properties": {"name": "Hillard"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates":[[
+			[-83.206105, 40.069125],
+            [-83.206105, 39.999671],
+            [-83.097193, 39.999671],
+            [-83.097193, 40.069125]
+
 		]]}	
-}];
+},
+
+{
+    "type": "Feature",
+    "properties": {"name": "Upper Arlington"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates":[[
+			[-83.103713, 40.063688],
+            [-83.103713, 39.989289],
+            [-83.042568, 39.989289],
+            [-83.042568, 40.063688]
+		]]}	
+},
+
+{
+    "type": "Feature",
+    "properties": {"name": "Grandview Heights"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates":[[
+			[-83.068661, 39.991323],
+            [-83.068661, 39.970462],
+            [-83.021089, 39.970462],
+            [-83.021089, 39.991323]
+		]]}	
+},
+
+{
+    "type": "Feature",
+    "properties": {"name": "Columbus City"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates":[[
+			[-83.183397, 40.114546], 
+            [-82.792829, 40.114546],
+            [-82.792829, 39.808694,],
+            [-83.183397, 39.808694]
+
+		]]}	
+},
+
+{
+    "type": "Feature",
+    "properties": {"name": "South Western"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates":[[
+			[-83.252031, 39.994919], 
+            [-83.000314, 39.994919], 
+            [-83.000314, 39.799406],
+            [-83.252031, 39.799406]
+		]]}	
+},
+
+{
+    "type": "Feature",
+    "properties": {"name": "Hamilton Local"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates":[[
+			[39.891353, -83.024819],
+            [39.891353, -82.931444],
+            [39.801007, -82.931444],
+            [39.801007, -83.024819]	
+		]]}	
+}
+
+    
+    
+];
 
 
 
@@ -228,11 +324,11 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 		onEachFeature: onEachFeature
 	}).addTo(map);
 	
-	//Remove me 1st: N / S 2nd: W / E
-	var marker1 = L.marker([a1, a2]).addTo(map);
-	var marker1 = L.marker([b1, b2]).addTo(map);
-	var marker1 = L.marker([c1, c2]).addTo(map);
-	var marker1 = L.marker([d1, d2]).addTo(map);
+// 	//Remove me 1st: N / S 2nd: W / E
+// 	var marker1 = L.marker([a1, a2]).addTo(map);
+// 	var marker1 = L.marker([b1, b2]).addTo(map);
+// 	var marker1 = L.marker([c1, c2]).addTo(map);
+// 	var marker1 = L.marker([d1, d2]).addTo(map);
 
 	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
