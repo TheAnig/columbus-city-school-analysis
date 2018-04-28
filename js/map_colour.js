@@ -16,24 +16,19 @@ var d2 = -82.9987900
 
 var schoolData = [{
     "type": "Feature",
-    "properties": {"name": "Bexley", “Success %”:0.916,”Absent %”:0.051, “ACT Remedial %”: 0.706, “Median Income %”: 0.952, “Diversity %”: 0.14, “Parent with College Degree”:0.742, “Teacher Experience”: 0.875, “Teacher Salary”:0.921, “Teacher Per 1000 student %”:0.904, “Graduation %”:0.95},
+    "properties": {"name": "Bexley", "Success %":0.916,"Absent %":0.051, "ACT Remedial %": 0.706, "Median Income %": 0.952, "Diversity %": 0.14, "Parent with College Degree":0.742, "Teacher Experience": 0.875, "Teacher Salary":0.921, "Teacher Per 1000 student %":0.904, "Graduation %":0.95},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
 			[-82.34153272897099, 39.9078386874],
 			[-82.371962606971, 39.90975127531], 
 			[-82.371962606971, 39.92122680277],
-			[-82.35066169237099, 39.92505197859], 
-			[-82.34457571677099, 39.92122680277], 
-			[-82.34457571677099, 39.926964566500004], 
-			[-82.32631778997099, 39.91931421486], 
-			[-82.323274802171, 39.90975127531], 
-			[-82.34153272897099, 39.9078386874]
+			[-82.35066169237099, 39.92505197859]
 		]]}	
 }, 
 {
     "type": "Feature",
-    "properties": {"name": "Whitehall", “Success %”:.169,”Absent %”:0.238, “ACT Remedial %”: 0.106, “Median Income %”: 0.322, “Diversity %”: 0.68, “Parent with College Degree”:0.106, “Teacher Experience”: .4375, “Teacher Salary”:.71135, “Teacher Per 1000 student %”:0.7723, “Graduation %”:0.77},
+    "properties": {"name": "Whitehall", "Success %":.169,"Absent %":0.238, "ACT Remedial %": 0.106, "Median Income %": 0.322, "Diversity %": 0.68, "Parent with College Degree":0.106, "Teacher Experience": .4375, "Teacher Salary":.71135, "Teacher Per 1000 student %":0.7723, "Graduation %":0.77},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
@@ -46,7 +41,7 @@ var schoolData = [{
 },
 {
     "type": "Feature",
-    "properties": {"name": "Groveport Madison", “Success %”:0.23,”Absent %”:0.173, “ACT Remedial %”: 0.146, “Median Income %”: 0.42, “Diversity %”: 0.53, “Parent with College Degree”:0.169, “Teacher Experience”: 0.563, “Teacher Salary”:0.707, “Teacher Per 1000 student %”:0.783, “Graduation %”:0.803},
+    "properties": {"name": "Groveport Madison", "Success %":0.23,"Absent %":0.173, "ACT Remedial %": 0.146, "Median Income %": 0.42, "Diversity %": 0.53, "Parent with College Degree":0.169, "Teacher Experience": 0.563, "Teacher Salary":0.707, "Teacher Per 1000 student %":0.783, "Graduation %":0.803},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
@@ -58,7 +53,7 @@ var schoolData = [{
 },
 {
     "type": "Feature",
-    "properties": {"name": "Canal Winchester", “Success %”:0.416,”Absent %”:0.106, “ACT Remedial %”: 0.288, “Median Income %”: 0.612, “Diversity %”: 0.32, “Parent with College Degree”:0.353, “Teacher Experience”: 0.75, “Teacher Salary”:0.681, “Teacher Per 1000 student %”:0.843, “Graduation %”:0.969},
+    "properties": {"name": "Canal Winchester", "Success %":0.416,"Absent %":0.106, "ACT Remedial %": 0.288, "Median Income %": 0.612, "Diversity %": 0.32, "Parent with College Degree":0.353, "Teacher Experience": 0.75, "Teacher Salary":0.681, "Teacher Per 1000 student %":0.843, "Graduation %":0.969},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
@@ -71,11 +66,11 @@ var schoolData = [{
 },
 {
     "type": "Feature",
-    "properties": {"name": "Reynoldsburg", “Success %”:.32,”Absent %”:0.116, “ACT Remedial %”: 0.184, “Median Income %”: 0.48, “Diversity %”: 0.56, “Parent with College Degree”:0.297, “Teacher Experience”: .5625, “Teacher Salary”:0.72981, “Teacher Per 1000 student %”:0.6792, “Graduation %”:0.924},
+    "properties": {"name": "Reynoldsburg", "Success %":.32,"Absent %":0.116, "ACT Remedial %": 0.184, "Median Income %": 0.48, "Diversity %": 0.56, "Parent with College Degree":0.297, "Teacher Experience": .5625, "Teacher Salary":0.72981, "Teacher Per 1000 student %":0.6792, "Graduation %":0.924},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
-			[-82.836013, 39.988194],"name": "Reynoldsburg", “Success %”:.32,”Absent %”:0.116, “ACT Remedial %”: 0.184, “Median Income %”: 0.48, “Diversity %”: 0.56, “Parent with College Degree”:0.297, “Teacher Experience”: .5625, “Teacher Salary”:0.72981, “Teacher Per 1000 student %”:0.6792, “Graduation %”:0.924
+			[-82.836013, 39.988194],
 			[-82.742168, 39.988194],
 			[-82.742168, 39.931447],
 			[-82.836013, 39.931447]
@@ -84,7 +79,7 @@ var schoolData = [{
 },
 {
     "type": "Feature",
-    "properties": {"name": "Dublin", “Success %”:0.846,”Absent %”:0.088, “ACT Remedial %”: 0.67, “Median Income %”: 0.759, “Diversity %”: 0.16, “Parent with College Degree”:0.625, “Teacher Experience”: 0.688, “Teacher Salary”:0.95, “Teacher Per 1000 student %”:0.849, “Graduation %”:0.975},
+    "properties": {"name": "Dublin", "Success %":0.846,"Absent %":0.088, "ACT Remedial %": 0.67, "Median Income %": 0.759, "Diversity %": 0.16, "Parent with College Degree":0.625, "Teacher Experience": 0.688, "Teacher Salary":0.95, "Teacher Per 1000 student %":0.849, "Graduation %":0.975},
     "geometry": {
         "type": "Polygon",
         "coordinates": [[
@@ -96,7 +91,7 @@ var schoolData = [{
     }
 }, {
     "type": "Feature",
-    "properties": {"name": "Worthington", “Success %”:0.637,”Absent %”:0.071, “ACT Remedial %”: 0.511, “Median Income %”: 0.694, “Diversity %”: 0.25, “Parent with College Degree”:0.573, “Teacher Experience”: 1, “Teacher Salary”:0.903, “Teacher Per 1000 student %”:0.844, “Graduation %”:0.949},
+    "properties": {"name": "Worthington", "Success %":0.637,"Absent %":0.071, "ACT Remedial %": 0.511, "Median Income %": 0.694, "Diversity %": 0.25, "Parent with College Degree":0.573, "Teacher Experience": 1, "Teacher Salary":0.903, "Teacher Per 1000 student %":0.844, "Graduation %":0.949},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
@@ -107,7 +102,7 @@ var schoolData = [{
         ]]}    
 }, {
     "type": "Feature",
-    "properties": {"name": "Westerville", “Success %”:.511,”Absent %”:0.087, “ACT Remedial %”: 0.411, “Median Income %”: 0.614, “Diversity %”: 0.38, “Parent with College Degree”:0.485, “Teacher Experience”: .5, “Teacher Salary”:.8076, “Teacher Per 1000 student %”:0.765, “Graduation %”:0.905},
+    "properties": {"name": "Westerville", "Success %":.511,"Absent %":0.087, "ACT Remedial %": 0.411, "Median Income %": 0.614, "Diversity %": 0.38, "Parent with College Degree":0.485, "Teacher Experience": .5, "Teacher Salary":.8076, "Teacher Per 1000 student %":0.765, "Graduation %":0.905},
     "geometry": {
         "type": "Polygon",
         "coordinates": [[
@@ -119,7 +114,7 @@ var schoolData = [{
     }
 }, {
     "type": "Feature",
-    "properties": {"name": "New Albany", “Success %”:.839,”Absent %”:0.091, “ACT Remedial %”: 0.644, “Median Income %”: 1, “Diversity %”: 0.17, “Parent with College Degree”:0.668, “Teacher Experience”: .9375, “Teacher Salary”:0.87744, “Teacher Per 1000 student %”:0.8102, “Graduation %”:0.974},
+    "properties": {"name": "New Albany", "Success %":.839,"Absent %":0.091, "ACT Remedial %": 0.644, "Median Income %": 1, "Diversity %": 0.17, "Parent with College Degree":0.668, "Teacher Experience": .9375, "Teacher Salary":0.87744, "Teacher Per 1000 student %":0.8102, "Graduation %":0.974},
     "geometry": {
         "type": "Polygon",
         "coordinates": [[
@@ -131,7 +126,7 @@ var schoolData = [{
     }
 }, {
     "type": "Feature",
-    "properties": {"name": "Gahanna", “Success %”:0.446,”Absent %”:0.068, “ACT Remedial %”: 0.347, “Median Income %”: 0.684, “Diversity %”: 0.34, “Parent with College Degree”:0.478, “Teacher Experience”: 0.625, “Teacher Salary”:0.814, “Teacher Per 1000 student %”:0.781, “Graduation %”:0.935},
+    "properties": {"name": "Gahanna", "Success %":0.446,"Absent %":0.068, "ACT Remedial %": 0.347, "Median Income %": 0.684, "Diversity %": 0.34, "Parent with College Degree":0.478, "Teacher Experience": 0.625, "Teacher Salary":0.814, "Teacher Per 1000 student %":0.781, "Graduation %":0.935},
     "geometry": {
         "type": "Polygon",
         "coordinates": [[
@@ -145,7 +140,7 @@ var schoolData = [{
 
 {
     "type": "Feature",
-    "properties": {"name": "Hilliard", “Success %”:.573,”Absent %”:0.081, “ACT Remedial %”: 0.457, “Median Income %”: 0.699, “Diversity %”: 0.18, “Parent with College Degree”:0.5, “Teacher Experience”: 1, “Teacher Salary”:0.93086, “Teacher Per 1000 student %”:0.79665, “Graduation %”:0.953},
+    "properties": {"name": "Hilliard", "Success %":.573,"Absent %":0.081, "ACT Remedial %": 0.457, "Median Income %": 0.699, "Diversity %": 0.18, "Parent with College Degree":0.5, "Teacher Experience": 1, "Teacher Salary":0.93086, "Teacher Per 1000 student %":0.79665, "Graduation %":0.953},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
@@ -159,7 +154,7 @@ var schoolData = [{
 
 {
     "type": "Feature",
-    "properties": {"name": "Upper Arlington", “Success %”:.952,”Absent %”:0.062, “ACT Remedial %”: 0.756, “Median Income %”: 0.998, “Diversity %”: 0.08, “Parent with College Degree”:0.734, “Teacher Experience”: .9375, “Teacher Salary”:1, “Teacher Per 1000 student %”:0.955, “Graduation %”:0.975},
+    "properties": {"name": "Upper Arlington", "Success %":.952,"Absent %":0.062, "ACT Remedial %": 0.756, "Median Income %": 0.998, "Diversity %": 0.08, "Parent with College Degree":0.734, "Teacher Experience": .9375, "Teacher Salary":1, "Teacher Per 1000 student %":0.955, "Graduation %":0.975},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
@@ -172,7 +167,7 @@ var schoolData = [{
 
 {
     "type": "Feature",
-    "properties": {"name": "Grandview", “Success %”:0.707,”Absent %”:0.066, “ACT Remedial %”: 0.641, “Median Income %”: 0.723, “Diversity %”: 0.07, “Parent with College Degree”:0.701, “Teacher Experience”: 0.875, “Teacher Salary”:0.935, “Teacher Per 1000 student %”:1, “Graduation %”:0.958},
+    "properties": {"name": "Grandview", "Success %":0.707,"Absent %":0.066, "ACT Remedial %": 0.641, "Median Income %": 0.723, "Diversity %": 0.07, "Parent with College Degree":0.701, "Teacher Experience": 0.875, "Teacher Salary":0.935, "Teacher Per 1000 student %":1, "Graduation %":0.958},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
@@ -185,7 +180,7 @@ var schoolData = [{
 
 {
     "type": "Feature",
-    "properties": {"name": "Columbus", “Success %”:0.147,”Absent %”:0.378, “ACT Remedial %”: 0.087, “Median Income %”: 0.385, “Diversity %”: 0.72, “Parent with College Degree”:0.314, “Teacher Experience”: 0.625, “Teacher Salary”:0.826, “Teacher Per 1000 student %”:0.888, “Graduation %”:0.741 },
+    "properties": {"name": "Columbus", "Success %":0.147,"Absent %":0.378, "ACT Remedial %": 0.087, "Median Income %": 0.385, "Diversity %": 0.72, "Parent with College Degree":0.314, "Teacher Experience": 0.625, "Teacher Salary":0.826, "Teacher Per 1000 student %":0.888, "Graduation %":0.741 },
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
@@ -199,7 +194,7 @@ var schoolData = [{
 
 {
     "type": "Feature",
-    "properties": {"name": "Southwestern", “Success %”:.28,”Absent %”:0.18, “ACT Remedial %”: 0.13, “Median Income %”: 0.459, “Diversity %”: 0.33, “Parent with College Degree”:0.207, “Teacher Experience”: .8125, “Teacher Salary”:0.80364, “Teacher Per 1000 student %”:0.73408, “Graduation %”:0.865},
+    "properties": {"name": "Southwestern", "Success %":.28,"Absent %":0.18, "ACT Remedial %": 0.13, "Median Income %": 0.459, "Diversity %": 0.33, "Parent with College Degree":0.207, "Teacher Experience": .8125, "Teacher Salary":0.80364, "Teacher Per 1000 student %":0.73408, "Graduation %":0.865},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
@@ -212,7 +207,7 @@ var schoolData = [{
 
 {
     "type": "Feature",
-    "properties": {"name": "Hamilton Local", “Success %”:.238,”Absent %”:0.13, “ACT Remedial %”: 0.178, “Median Income %”: 0.404, “Diversity %”: 0.2, “Parent with College Degree”:0.085, “Teacher Experience”: .625, “Teacher Salary”:0.796, “Teacher Per 1000 student %”:0.815, “Graduation %”:0.954},
+    "properties": {"name": "Hamilton Local", "Success %":.238,"Absent %":0.13, "ACT Remedial %": 0.178, "Median Income %": 0.404, "Diversity %": 0.2, "Parent with College Degree":0.085, "Teacher Experience": .625, "Teacher Salary":0.796, "Teacher Per 1000 student %":0.815, "Graduation %":0.954},
     "geometry": {
         "type": "Polygon",
         "coordinates":[[
