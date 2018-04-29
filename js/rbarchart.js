@@ -70,17 +70,17 @@ function drawChart(error, data){
 		.style("fill", function (d) { return color(d.School_dist); })
 		.on("click", function(d, i) {
 			// This handles the color toggling
-			var currentColor;
-			if (colorArry[i] == 1)
-			{
-				colorArry[i] = 0;
-				currentColor = "Gray";
-			}
-			else
-			{
-				colorArry[i] = 1;
-				currentColor = color(d.School_dist)
-			}
+			//var currentColor;
+			//if (colorArry[i] == 1)
+			//{
+				//colorArry[i] = 0;
+				//currentColor = "Gray";
+			//}
+			//else
+			//{
+				//colorArry[i] = 1;
+			currentColor = color(d.School_dist)
+			//}
 			d3.select(this).style("fill", currentColor);
 		})
 		.style("opacity", 0.6)
